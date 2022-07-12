@@ -1,0 +1,30 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int a,b,gcd;
+   
+   cout<<"Enter two number: \n";
+   cin>>a>>b;
+   
+   gcd = min(a,b);
+   //cout<<endl<<gcd<<endl;
+   
+   
+   while(gcd > 0)
+   {
+       if(a%gcd==0 && b%gcd==0)
+       {
+       cout<<"\n GCD is: "<<gcd;
+       break;
+       }
+       else 
+       gcd--;
+   }
+   
+   
+
+    return 0;
+}
