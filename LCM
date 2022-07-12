@@ -1,26 +1,28 @@
 #include <iostream>
+#include <limits.h>
 using namespace std;
 
-int main() 
+ int gcd(int a, int b)
 {
-   int a,b,lcm;
+	if(b==0)
+		return a;
+
+	return gcd(b, a % b);
+}
+
+int lcm(int a, int b)
+{
+    return (a * b) / gcd(a, b);
+}
+
+int main() {
+    
+    	int a, b;
    
    cout<<"Enter two number: \n";
    cin>>a>>b;
-   
-   lcm = max(a,b);
-   cout<<endl<<lcm<<endl;
-   
-   
-   while(true)
-   {
-       if(a%lcm==0 && b%lcm==0)
-          cout<<"\nLCM is: "<<lcm;
-       //return lcm;
-       lcm++;
-   }
-   
-   cout<<"\nLCM is: "<<lcm;
-   
-    return 0;
+
+    	cout<<lcm(a, b);
+    	
+    	return 0;
 }
