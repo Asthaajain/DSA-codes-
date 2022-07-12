@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   int a,b,lcm;
+   
+   cout<<"Enter two number: \n";
+   cin>>a>>b;
+   
+   lcm = max(a,b);
+   cout<<endl<<lcm<<endl;
+   
+   
+   while(true)
+   {
+       if(a%lcm==0 && b%lcm==0)
+          cout<<"\nLCM is: "<<lcm;
+       //return lcm;
+       lcm++;
+   }
+   
+   cout<<"\nLCM is: "<<lcm;
+   
+    return 0;
+}
