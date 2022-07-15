@@ -1,0 +1,32 @@
+
+class Solution {
+  public:
+    vector<int> quadraticRoots(int a, int b, int c) {
+        
+       vector<int> p;
+       double r1 = -1, 
+              r2,
+              D = (b*b - 4*a*c);
+              
+       if(D < 0){
+           p.push_back(-1);
+           return p;
+       }      
+
+       if(D >= 0){
+           r1 = floor((-b + sqrt(D))/(2*a));
+           r2 = floor((-b - sqrt(D))/(2*a));
+       }
+       
+       if(r1 >= r2){
+           p.push_back(r1);
+           p.push_back(r2);
+       }
+       else{
+           p.push_back(r2);
+           p.push_back(r1);
+       }
+       
+       return p;
+  }
+};
