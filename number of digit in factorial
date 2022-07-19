@@ -1,0 +1,24 @@
+class Solution
+{
+    public:
+    int digitsInFactorial(int N)
+    {
+        unsigned long long int fact = 1;
+        int count=0;
+        
+        while(N>0)
+        {
+            fact = fact * N;
+            N--;
+        }
+        
+
+        while(fact > 0)
+        {
+            fact = fact/10;
+            count++;
+        }
+        
+        return count;
+    }
+};
