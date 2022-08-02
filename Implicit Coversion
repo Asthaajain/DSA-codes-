@@ -1,0 +1,25 @@
+//Working of Implicit type-conversion
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() 
+{
+
+   string str = "123";
+   int num = 234;
+   double numd = 9.99;
+   
+
+
+   str = to_string(num);
+   
+   numd = stoi(str);
+   
+   cout << "String = " << str << endl;
+   cout << "num_int = " << num << endl;
+   cout << "num_double = " << numd << endl;
+
+   return 0;
+}
